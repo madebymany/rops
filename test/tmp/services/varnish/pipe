@@ -1,2 +1,0 @@
-  set bereq.http.connection = "close";
-  return(pipe);

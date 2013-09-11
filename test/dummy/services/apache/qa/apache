@@ -1,8 +1,0 @@
-<VirtualHost *:80>
-  ServerName localhost
-  RailsEnv qa  
-
-  Include "/etc/apache2/sites-available/dummy-common"
-  Include "/etc/apache2/sites-available/dummy-headers"
-  Include "/etc/apache2/sites-available/dummy-redirects"
-</VirtualHost>
