@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+  ServerName localhost
+  RailsEnv production  
+
+  Include "/etc/apache2/sites-available/rops-common"
+  Include "/etc/apache2/sites-available/rops-headers"
+  Include "/etc/apache2/sites-available/rops-redirects"
+</VirtualHost>

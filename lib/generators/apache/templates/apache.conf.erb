@@ -1,0 +1,8 @@
+<VirtualHost *:<%= options.port %>>
+  ServerName <%= options.server_name %>
+  RailsEnv <%= environment %>  
+
+  Include "/etc/apache2/sites-available/<%= application_name %>-common"
+  Include "/etc/apache2/sites-available/<%= application_name %>-headers"
+  Include "/etc/apache2/sites-available/<%= application_name %>-redirects"
+</VirtualHost>

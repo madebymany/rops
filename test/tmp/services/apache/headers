@@ -1,0 +1,5 @@
+<IfModule mod_headers.c>
+  Header always unset "X-Powered-By"
+  Header always unset "X-Runtime"
+  Header always unset "X-Rack-Cache"
+</IfModule>
