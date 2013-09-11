@@ -1,0 +1,46 @@
+backend default {
+  .host = "127.0.0.1";
+  .port = "81";
+}
+
+include "/etc/varnish/rops-backends"
+
+sub vcl_init {
+  include "/etc/varnish/rops-init"
+}
+
+sub vcl_recv {
+  include "/etc/varnish/rops-receive"
+}
+
+sub vcl_hit {
+  include "/etc/varnish/rops-hit"
+}
+
+sub vcl_miss {
+  include "/etc/varnish/rops-miss"
+}
+
+sub vcl_hash {
+  include "/etc/varnish/rops-hash"
+}
+
+sub vcl_pipe {
+  include "/etc/varnish/rops-pipe"
+}
+
+sub vcl_fetch {
+  include "/etc/varnish/rops-fetch"
+}
+
+sub vcl_error {
+  include "/etc/varnish/rops-error"
+}
+
+sub vcl_fini {
+  include "/etc/varnish/rops-finish"
+}
+
+sub vcl_deliver {
+  include "/etc/varnish/rops-deliver"
+}

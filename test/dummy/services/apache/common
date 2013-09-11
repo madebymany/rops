@@ -1,7 +1,7 @@
   CustomLog /var/log/apache2/access.log combined
-  DocumentRoot /www/rops/current/public
+  DocumentRoot /www/dummy/current/public
 
-  <Directory "/www/rops/current/public/system">
+  <Directory "/www/dummy/current/public/system">
     Header set Cache-Control "no-cache"
   </Directory>
 

@@ -1,0 +1,7 @@
+  set beresp.grace = <%= options.grace %>s;
+
+  if (beresp.http.Cache-Control ~ "max-age") {
+    unset beresp.http.Set-Cookie;
+    return(deliver);
+  }
+  return(hit_for_pass);

@@ -1,0 +1,9 @@
+  set beresp.grace = <%= options.grace %>s;
+
+  include "/etc/varnish/<%= application_name %>-fetch"
+
+  if (beresp.http.Cache-Control ~ "max-age") {
+    unset beresp.http.Set-Cookie;
+    return(deliver);
+  }
+  return(hit_for_pass);
