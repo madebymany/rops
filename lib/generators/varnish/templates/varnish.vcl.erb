@@ -3,44 +3,44 @@ backend default {
   .port = "<%= options.backend_port %>";
 }
 
-include "/etc/varnish/<%= application_name %>-backends"
+include "/etc/varnish/<%= application_name %>-backends";
 
 sub vcl_init {
-  include "/etc/varnish/<%= application_name %>-init"
+  include "/etc/varnish/<%= application_name %>-init";
 }
 
 sub vcl_recv {
-  include "/etc/varnish/<%= application_name %>-receive"
+  include "/etc/varnish/<%= application_name %>-receive";
 }
 
 sub vcl_hit {
-  include "/etc/varnish/<%= application_name %>-hit"
+  include "/etc/varnish/<%= application_name %>-hit";
 }
 
 sub vcl_miss {
-  include "/etc/varnish/<%= application_name %>-miss"
+  include "/etc/varnish/<%= application_name %>-miss";
 }
 
 sub vcl_hash {
-  include "/etc/varnish/<%= application_name %>-hash"
+  include "/etc/varnish/<%= application_name %>-hash";
 }
 
 sub vcl_pipe {
-  include "/etc/varnish/<%= application_name %>-pipe"
+  include "/etc/varnish/<%= application_name %>-pipe";
 }
 
 sub vcl_fetch {
-  include "/etc/varnish/<%= application_name %>-fetch"
+  include "/etc/varnish/<%= application_name %>-fetch";
 }
 
 sub vcl_error {
-  include "/etc/varnish/<%= application_name %>-error"
+  include "/etc/varnish/<%= application_name %>-error";
 }
 
 sub vcl_fini {
-  include "/etc/varnish/<%= application_name %>-finish"
+  include "/etc/varnish/<%= application_name %>-finish";
 }
 
 sub vcl_deliver {
-  include "/etc/varnish/<%= application_name %>-deliver"
+  include "/etc/varnish/<%= application_name %>-deliver";
 }
