@@ -23,6 +23,7 @@ module Rops
             create_file "services/apache/#{e}/auth"
           end
           create_file "services/apache/redirects"
+          create_file "services/apache/auth"
           template "common.conf.erb", "services/apache/common"
           template "headers.conf.erb", "services/apache/headers"
         else
