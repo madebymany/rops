@@ -23,11 +23,11 @@ module Rops
             create_file "services/apache/#{e}/auth"
           end
           create_file "services/apache/redirects"
-          create_file "services/apache/auth"
           template "common.conf.erb", "services/apache/common"
+          template "ip.conf.erb", "services/apache/ip-restriction"
           template "headers.conf.erb", "services/apache/headers"
         else
-          puts "You've already generated the apache config, you can't override it!"
+          puts "You've already generated the apache config, you must pass the --override flag to overwrite it!"
         end
       end
     end

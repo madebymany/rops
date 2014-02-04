@@ -1,0 +1,13 @@
+# Uncomment to enable IP restriction
+
+#SetEnvIf REMOTE_ADDR "(.+)" CLIENTIP=$1
+#SetEnvIf X-Forwarded-For "^([0-9.]+)" CLIENTIP=$1
+
+#e.g.
+#SetEnvIf CLIENTIP "192\.168\.0\.1" allowed_in
+
+#<Location />
+#  Order deny,allow
+#  Deny from all
+#  Allow from env=allowed_in
+#</Location>
