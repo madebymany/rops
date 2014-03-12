@@ -1,0 +1,8 @@
+server {
+  rails_env <%= environment %>;
+  listen <%= options.port %>;
+  server_name <%= options.server_name %>;
+
+  # includes
+  Include "/etc/nginx/sites-available/<%= application_name %>-common";
+}
