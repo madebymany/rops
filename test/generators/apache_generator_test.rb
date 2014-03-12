@@ -10,7 +10,7 @@ class ApacheGeneratorTest < Rails::Generators::TestCase
   def environments
     @environments || %w(production staging qa)
   end
-  
+
   def common
     @common || %w(common redirects headers)
   end

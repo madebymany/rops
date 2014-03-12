@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "wrong"
   s.add_development_dependency "ansi"
   s.add_development_dependency "turn"
+  s.add_development_dependency "pry"
 end

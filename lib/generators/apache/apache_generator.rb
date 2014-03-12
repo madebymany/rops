@@ -13,6 +13,7 @@ module Rops
       class_option :override, :type => :boolean, :default => false, :desc => "override the write protection"
       class_option :port, :type => :string, :default => "80", :desc => "port apache is to operate on"
       class_option :server_name, :type => :string, :default => "localhost", :desc => "domain name the site resolves too"
+      class_option :server_aliases, :type => :string, :default => "localhost", :desc => "a list of server aliases seperated by a , e.g. 'www.example.org,subdomain.example.org'"
 
       def create_config
         if options.override or not File.exists? "services/apache/redirects"

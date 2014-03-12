@@ -10,7 +10,7 @@ class VarnishGeneratorTest < Rails::Generators::TestCase
   def environments
     @environments || %w(production staging qa)
   end
-  
+
   def common
     @common || %w(miss deliver error pipe hash hit finish receive fetch init backends)
   end
